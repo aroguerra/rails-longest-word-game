@@ -4,9 +4,9 @@
   <%= category %>
   <% end %>
 </h2>
-<% start_time = Time.now %>
 <form action="/score" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :start_time, @start_time %>
   <input id="letters" name="letters" type="hidden" value="<%= @letters_array %>"/>
   <input type="text" name="word" placeholder="write a word">
   <input type="submit">
